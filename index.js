@@ -30,8 +30,11 @@ function saveData() {
         users[i].balance += amount;
         spBalance.innerHTML = users[i].balance;
       } else if (type == "2") {
+        if(users[i].balance-amount>0)
+        {
         users[i].balance -= amount;
         spBalance.innerHTML = users[i].balance;
+        }
       } else if (type == "3") {
         let newUser = document.getElementById("selUser").value;
         for (let i = 0; i < users.length; i++) {
